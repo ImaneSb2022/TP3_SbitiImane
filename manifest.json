@@ -1,0 +1,35 @@
+{
+    "name": "Projet final",
+    "short_name": "projetFinal",
+    "start_url": "index.html",
+    "display": "standalone",
+    "theme_color": "#E8AABE",
+    "background_color": "#4AA3A2",
+    "icons": [
+        {
+            "src": "img/icons/portfolio.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "img/icons/html.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "img/icons/web-design.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "img/icons/wordpress.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+  }
+  

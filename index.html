@@ -2,10 +2,248 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Portfolio - Imane Sbiti</title>
+
+    <link rel="stylesheet" type="text/css" href="./style/css/style.css" />
+
+    <link rel="shortcut icon" href="/img/icons/portfolio.png" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
+
+    <script src="./js/caroussel.js"></script>
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#E8AABE"/>
+    <script>
+        // Register service worker.
+        if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+        .then((reg) => {
+        console.log('Service worker registered.', reg);
+        });
+        });
+        }
+    </script>
+
+
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Weather PWA">
+    <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+
+    <button class="nav-link px-lg-4 px-2" id="butInstall" aria-label="Install" hidden>Installer la PWA</button>
+    <script src="js/install.js"></script>
+
+    <meta name="description" content="A sample weather app">
+    
 </head>
 <body>
-    helllo
+    <header class="col-span-12">
+
+        <nav class="header my-8">
+            <div class="header_nav max-w-screen-xl flex flex-wrap self-center mx-auto p-4 ">
+                <div class="justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+                <ul class=" flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+                    <li>
+                    <a href="index.html" class=" active block py-2 pl-3 pr-4 rounded md:p-0" aria-current="page">Accueil</a>
+                    </li>
+                    <li>
+                    <a href="apropos.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">À propos de moi</a>
+                    </li>
+                    <li>
+                    <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Compétences & Expériences</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+    <main class="grid grid-cols-12" >
+
+        
+        <section class="col-span-12 grid grid-cols-2 SectionHome__1">
+
+
+            <article class="SectionHome__1--caroussel">
+                
+                    <div id="controls-carousel" class="relative w-full" data-carousel="static">
+                        <!-- Carousel wrapper -->
+                        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                            <!-- Item 1 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="./img/slider-1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                                <img src="./img/slider-2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="./img/slider-3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="./img/slider-4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            </div>
+                        </div>
+                        <!-- Slider controls -->
+                        <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                                </svg>
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </button>
+                        <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                                </svg>
+                                <span class="sr-only">Next</span>
+                            </span>
+                        </button>
+                    </div>
+
+            </article>
+
+
+
+            <article class="SectionHome__1--presentation">
+
+                <div class="SectionHome__1--presentation-title">
+                    <p>Hello!</p>
+                    <p>Je m’appelle Imane</p>
+                </div>
+                <div class="SectionHome__1--presentation-p">
+                    <p>"Je suis intégratrice web, développeur Wordpress, et webdesigner à Québec. Bienvenue sur mon portfolio!"</p>
+                </div>
+                <div class="SectionHome__1--presentation-button">
+                    <a href="realisation.html">Voir mes réalisations</a>
+                </div>
+                
+            </article>
+
+        </section>
+
+
+        <section class="col-span-12 SectionHome_2">
+            <h2>PORTFOLIO</h2>
+            <h4>- Voici quelques unes de mes réalisations -</h4>
+                <article class="grid " style="background-color: brown;">
+                    <div class="SectionHome_2--gallery grid grid-cols-2 md:grid-cols-4 gap-0">
+                        <div class="grid gap-0">
+                            <div>
+                                <a href="#"><img class="h-auto max-w-full" src="./img/1.jpg" alt="web intégrateur 1"></a>
+                                
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full" src="./img/2.jpg" alt="web intégrateur">
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full" src="./img/3.jpg" alt="web intégrateur">
+                            </div>
+                        </div>
+                        <div class="grid gap-0">
+                            <div>
+                                <img class="h-auto max-w-full" src="./img/4.jpg" alt="web intégrateur">
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full" src="./img/5.jpg" alt="web intégrateur">
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full" src="./img/6.jpg" alt="web intégrateur">
+                            </div>
+                        </div>
+                        <div class="grid gap-0">
+                            <div>
+                                <img class="h-auto max-w-full" src="./img/7.jpg" alt="web intégrateur">
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full" src="./img/8.jpg" alt="web intégrateur">
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full" src="./img/9.jpg" alt="web intégrateur">
+                            </div>
+                        </div>
+                        <div class="grid gap-0">
+                            <div>
+                                <img class="h-auto max-w-full" src="./img/10.jpg" alt="web intégrateur">
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full" src="./img/11.jpg" alt="web intégrateur">
+                            </div>
+                            <div>
+                                <img class="h-auto max-w-full" src="./img/12.jpg" alt="web intégrateur">
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+            
+        </section>
+
+
+        <section class="col-span-12 SectionHome_3">
+            <h2>MES SERVICES</h2>
+            <div class="col-span-12 grid gap-6 grid-cols-3">
+                <article class="SectionHome_3--webdesign ">
+                    <div>
+                        <img src="./img/web-design.png" alt="webdesign">
+                    </div>
+                    
+                    <h4>WEBDESIGN</h4>
+                    <p>Créer des maquettes web, concevoir des interfaces (wireframes, prototypage), réfléchir à une identité graphique sur mesure, respecter une charte graphique, pour vous faire des identités visuelles uniques, qui vous représentent le mieux.</p>
+    
+                </article>
+                <article  class="SectionHome_3--frontend">
+                    <div>
+                        <img src="./img/html.png" alt="DÉVELOPPEMENT FRONT-END">
+                    </div>
+                    <h4>DÉVELOPPEMENT FRONT-END</h4>
+                    Intégrer des maquettes web, réfléchir sur la performance d’une page web, fournir du code propre pour une maquette peaufinée et un site utilisable sur un maximum d’appareils et navigateurs, c’est mon coeur de métier.
+                </article>
+                <article  class="SectionHome_3--wordpress">
+                    <div>
+                        <img src="./img/wordpress.png" alt="WORDPRESS">
+                    </div>
+                    
+                    <h4>WORDPRESS</h4>
+                    Personnaliser des templates, créer des thèmes avec des pages builders(Visual composer & Elemontor) ou realiser des thémes sur-mesure from scratch. WP est pour moi un outil pour mettre en place des sites faciles à mettre à jour et extensibles.
+                </article>
+            </div>
+
+        </section>
+        
+    </main>
+
+    <footer class="footer col-span-12 grid">
+
+        <div class="footer_slogan grid-cols-12">
+            <p>IMANE</p>
+            <p>Travaillons ensemble!</p>
+        </div>
+
+        <div class="footer_copyright grid-cols-12">
+            <p>COPYRIGHT © 2023 SITE INTERNET RÉALISÉ ET HÉBERGÉ PAR <a href="index.html">IMANESBITI.COM</a> </p>
+        </div>
+
+    </footer>
+
 </body>
 </html>

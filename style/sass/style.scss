@@ -1,0 +1,313 @@
+// SASS BEM 
+//[block]__[element]--[modifier]
+
+//colors
+
+$RoseIndient : #CA3C66;
+$RoseCacher : #DB6A8F;
+$LightRoseCacher : #E8AABE;
+$LightRoseCacherLighter : #fbdbe5;
+$LightTurquoise : #A7E0E0;
+$Turquoise : #4AA3A2;
+$Light : #FFF;
+$Dark : #000;
+
+
+
+//extends
+.SectionTitle{
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: $Turquoise;
+}
+.RoteTitle{
+    font-size: 48px;
+    color: $RoseIndient;
+    text-align: center;
+    font-weight: bold;
+}
+.button{
+    a{
+        color: $Light;
+        background-color: $Turquoise;
+        padding: 20px 60px;
+        font-weight: bold;
+        &:hover{
+            transition: 0.5s;
+            background-color: $Light;
+            border: 1px $Turquoise solid;
+            color: $Turquoise;
+        }
+    }
+}
+//Mixins
+
+@mixin container($mt, $mr, $mb, $ml, $pt, $pr, $pb, $pl){
+
+    margin-top: $mt;
+    margin-right: $mr;
+    margin-bottom: $mb;
+    margin-left: $ml;
+
+    padding-top: $pt;
+    padding-right: $pr;
+    padding-bottom: $pb;
+    padding-left: $pl;
+}
+
+.center{
+    align-self: center;
+    place-content: center;
+	align-items: center;
+}
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+h1, h2{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.active{
+    text-decoration: underline;
+    text-underline-offset: 1em;
+}
+.header{
+    &_nav{
+        @extend .center;
+        a{
+            color: $Dark;
+            font-weight: 900;
+            transition: 0.4s;
+            text-underline-offset: 0.5em;
+            &:active{
+                color: $RoseIndient;
+            }
+            &:hover{
+                color: $RoseIndient;
+                text-decoration: underline;
+                text-underline-offset: 1em;
+            }
+        }
+    }
+}
+
+
+/* index.html*/
+
+/*Section présentation et caroussel */
+
+.SectionHome__1{
+    background-color: $LightRoseCacherLighter;
+    @include container(0, 0, 20px, 0, 60px, 40px, 60px, 40px);
+
+    &--caroussel{
+        margin : 0 8% 0 8%;
+        background-color: $LightRoseCacherLighter;
+    }
+    &--presentation{
+        margin : 0 8% 0 0;
+        &-title{
+            @extend .RoteTitle;
+        }
+        &-p{
+            text-align: center;
+            font-size: 24px;
+            padding: 20px 0;
+            /*&::before{
+                content: "-";
+                color: #7a7a7a;
+            }
+            &::after{
+                content: "-";
+                color: #7a7a7a;
+            }*/
+        }
+        &-button{
+            text-align: center;
+            margin: 20px 0;
+            @extend .button;
+        }
+    }
+    
+}
+.SectionHome_2{
+    @include container(0, 5%, 20px, 5%, 0, 40px, 60px, 40px);
+    h2{
+        @extend .SectionTitle;
+    }
+    h4{
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom:  40px;
+    }
+    &--gallery{
+        img{
+            margin: 0;
+            padding: 0;
+            transition: 1s ease;
+            &:hover{
+                opacity: 0.5;
+                //transition: 0.9s ease;
+                //background-color: $Turquoise;
+                transition: 1s ease;
+            }
+        }
+    }
+}
+.SectionHome_3{
+    @include container(0, 5%, 20px, 5%, 0, 0, 60px, 0);
+    h2{
+        @extend .SectionTitle;
+    }
+    &--webdesign{
+        background-color: $RoseIndient;
+    }
+    &--frontend{
+        background-color: $LightRoseCacherLighter;
+    }
+    &--wordpress{
+        background-color: $LightRoseCacher;
+    }
+    &--webdesign, &--frontend, &--wordpress{
+        margin-top: 40px;
+        padding: 20px;
+        img{
+            width: 10%;
+        }
+        h4{
+            font-weight: bold;
+            padding: 10px 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+/**************  APROPOS.HTML *********/
+
+.SectionApropos__1{
+    @include container(20px, 8%, 40px, 8%, 0, 0, 0, 0);
+    &--presentation{
+        align-self: center;
+        padding: 40px 0 40px 80px;
+        &-button{
+            @extend .button;
+            margin-top: 60px;
+        }
+        p{
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+    }
+    &--image{
+        div{
+            text-align: -webkit-center;
+        }
+        img{
+            width: 550%;
+            margin: 20px;
+        }
+    }
+}
+
+
+
+.SectionApropos__2{
+    background-image: url("../../img/bg-footer.jpg");
+    background-attachment: fixed;
+    height: 70%;
+    &--bloc{
+        background-color: $LightRoseCacherLighter;
+        @include container(60px, 8%, 20px, 8%, 0, 0, 0, 0);
+        &-competence1, &-competence2{
+            padding: 40px;
+            h4{
+                color: $RoseIndient;
+                font-weight: bold;
+                font-size: 24px;
+            }
+            ul{
+                margin-top: 20px;
+                li{
+                    font-size: 18px;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+/*********** CONTACT.HTML  **************/
+
+.SectionContact__1{
+    @include container(20px, 8%, 40px, 8%, 0, 0, 0, 0);
+    justify-self: center;
+    &-form{
+        align-self: center;
+    }
+
+
+    
+}
+.errorMessage {
+    color: $RoseIndient;
+    font-weight: bold;
+    font-size: 9px;
+}
+
+
+/*footer*/
+.footer{
+    &_slogan{
+        background-image: url('../../img/bg-footer.jpg');
+        background-attachment: fixed;
+        width: 100%;
+        padding: 80px 0;
+        p{
+            
+            //text-align: center;
+            //font-weight: bold;
+            //font-size: 48px;
+           // color: $RoseIndient;
+            @extend .RoteTitle;
+        }
+
+    }   
+    &_copyright{ 
+        
+        p{
+            padding: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            
+        }
+        a{
+            text-decoration: none;
+            transition: 0.4s;
+            text-underline-offset: 0.5em;
+            &:hover{
+                color: $RoseIndient;
+                text-decoration: underline;
+                text-underline-offset: 1em;
+            }
+        }
+    }
+
+}
