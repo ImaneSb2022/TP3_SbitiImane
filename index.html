@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Portfolio - Imane Sbiti</title>
-
     <link rel="stylesheet" type="text/css" href="./style/css/style.css" />
-
     <link rel="shortcut icon" href="/img/icons/portfolio.png" type="image/x-icon">
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@200&display=swap" rel="stylesheet">
 
-    <script src="./js/caroussel.js"></script>
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Weather PWA">
+    <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
     <link rel="manifest" href="./manifest.json" />
     <meta name="theme-color" content="#E8AABE"/>
+    <meta name="description" content="Je suis ingénieure diplômée en informatique. J’ai la chance de pouvoir pratiquer mon métier en tant que freelancer depuis 2010. Je travaille actuellement en tant qu’intégratrice web, développeur web et wordpress avec des clients au national et à l’international.">
+    <button class="nav-link px-lg-4 px-2" id="butInstall" aria-label="Install" hidden >Installer la PWA</button>
+
+
+
     <script>
         // Register service worker.
         if ('serviceWorker' in navigator) {
@@ -31,22 +36,14 @@
         });
         }
     </script>
-
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Weather PWA">
-    <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
-
-    <button class="nav-link px-lg-4 px-2" id="butInstall" aria-label="Install" hidden>Installer la PWA</button>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/caroussel.js"></script>
     <script src="js/install.js"></script>
 
-    <meta name="description" content="A sample weather app">
-    
 </head>
+
 <body>
     <header class="col-span-12">
-
         <nav class="header my-8">
             <div class="header_nav max-w-screen-xl flex flex-wrap self-center mx-auto p-4 ">
                 <div class="justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
@@ -58,10 +55,7 @@
                     <a href="apropos.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">À propos de moi</a>
                     </li>
                     <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Compétences & Expériences</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Portfolio</a>
+                    <a href="experience.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Compétences & Expériences</a>
                     </li>
                     <li>
                         <a href="contact.html" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
@@ -73,34 +67,23 @@
         
     </header>
     <main class="grid grid-cols-12" >
-
-        
         <section class="col-span-12 grid grid-cols-2 SectionHome__1">
-
-
             <article class="SectionHome__1--caroussel xl:col-span-1 lg:col-span-1 md:col-span-1 sm:col-span-2">
-                
                     <div id="controls-carousel" class="relative w-full" data-carousel="static">
-                        <!-- Carousel wrapper -->
                         <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                            <!-- Item 1 -->
                             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                                 <img src="./img/slider-1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                             </div>
-                            <!-- Item 2 -->
                             <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                                 <img src="./img/slider-2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                             </div>
-                            <!-- Item 3 -->
                             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                                 <img src="./img/slider-3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                             </div>
-                            <!-- Item 4 -->
                             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                                 <img src="./img/slider-4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                             </div>
                         </div>
-                        <!-- Slider controls -->
                         <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
                             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                                 <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
@@ -118,13 +101,8 @@
                             </span>
                         </button>
                     </div>
-
             </article>
-
-
-
             <article class="SectionHome__1--presentation xl:col-span-1 lg:col-span-1 md:col-span-1 sm:col-span-2">
-
                 <div class="SectionHome__1--presentation-title">
                     <p>Hello!</p>
                     <p>Je m’appelle Imane</p>
@@ -135,11 +113,8 @@
                 <div class="SectionHome__1--presentation-button">
                     <a href="realisation.html">Voir mes réalisations</a>
                 </div>
-                
             </article>
-
         </section>
-
 
         <section class="col-span-12 SectionHome_2">
             <h2>PORTFOLIO</h2>
@@ -192,23 +167,18 @@
                             </div>
                         </div>
                     </div>
-
                 </article>
-            
         </section>
-
-
         <section class="col-span-12 SectionHome_3">
+            <hr class="my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
             <h2>MES SERVICES</h2>
             <div class="col-span-12 grid gap-6 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1">
                 <article class="SectionHome_3--webdesign text-white xl:col-span-1 lg:col-span-1 md:col-span-1 sm:col-span-2">
                     <div>
                         <img src="./img/icons/web-design.png" alt="webdesign">
                     </div>
-                    
                     <h4>WEBDESIGN</h4>
                     <p>Créer des maquettes web, concevoir des interfaces (wireframes, prototypage), réfléchir à une identité graphique sur mesure, respecter une charte graphique, pour vous faire des identités visuelles uniques, qui vous représentent le mieux.</p>
-    
                 </article>
                 <article  class="SectionHome_3--frontend xl:col-span-1 lg:col-span-1 md:col-span-1 sm:col-span-2">
                     <div>
@@ -221,28 +191,20 @@
                     <div>
                         <img src="./img/icons/wordpress.png" alt="WORDPRESS">
                     </div>
-                    
                     <h4>WORDPRESS</h4>
                     Personnaliser des templates, créer des thèmes avec des pages builders(Visual composer & Elemontor) ou realiser des thémes sur-mesure from scratch. WP est pour moi un outil pour mettre en place des sites faciles à mettre à jour et extensibles.
                 </article>
             </div>
-
         </section>
-        
     </main>
-
     <footer class="footer col-span-12 grid">
-
         <div class="footer_slogan grid-cols-12">
             <p>IMANE</p>
             <p>Travaillons ensemble!</p>
         </div>
-
         <div class="footer_copyright grid-cols-12">
             <p>COPYRIGHT © 2023 SITE INTERNET RÉALISÉ ET HÉBERGÉ PAR <a href="index.html">IMANESBITI.COM</a> </p>
         </div>
-
     </footer>
-
 </body>
 </html>

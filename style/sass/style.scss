@@ -74,6 +74,7 @@ h1, h2{
     text-underline-offset: 1em;
 }
 .header{
+    margin-bottom: 80px;
     &_nav{
         @extend .center;
         a{
@@ -218,10 +219,48 @@ h1, h2{
         }
     }
 }
-
-
-
 .SectionApropos__2{
+    @include container(0, 8%, 40px, 8%, 0, 0, 0, 0);
+    h2{
+        @extend .SectionTitle;
+        margin-bottom:20px;
+    }
+}
+.SectionApropos__3{
+    @include container(0, 0, 40px, 0, 40px, 0, 0, 0);
+    background-color: $LightRoseCacherLighter;
+    h2{
+        @extend .SectionTitle;
+        margin-bottom:20px;
+    }
+}
+
+
+
+
+/*********** EXPERIENCE.HTML  **************/
+.SectionExperience__1{
+    @include container(10px, 8%, 60px, 8%, 0, 0, 0, 0);
+    h2{
+        @extend .SectionTitle;
+        margin:0 0 20px 0;
+    }
+    article{
+        padding: 20px;
+        h4{
+            font-weight: bold;
+            font-size: 24px;
+        }
+    }
+    &--annee{
+        text-align: right;
+        font-weight: bolder
+
+    }
+}
+
+.SectionExperience__2{
+    margin-top: 40px;
     background-image: url("../../img/bg-footer.jpg");
     background-attachment: fixed;
     height: 70%;
@@ -250,30 +289,18 @@ h1, h2{
     }
 }
 
-.SectionApropos__3{
+.SectionExperience__3{
     @include container(10px, 8%, 60px, 8%, 0, 0, 0, 0);
     h2{
         @extend .SectionTitle;
         margin:0 0 20px 0;
     }
-    article{
-        padding: 20px;
-        h4{
-            font-weight: bold;
-            font-size: 24px;
-        }
-    }
-    &--annee{
-        text-align: right;
-        font-weight: bolder
-
+    ol li time{
+        color: $RoseIndient;
+        font-weight: bold;
+        font-size: 18px;
     }
 }
-
-
-
-
-
 
 
 /*********** CONTACT.HTML  **************/
@@ -344,13 +371,30 @@ h1, h2{
 
 
 @media (max-width: 768px) and (min-width: 500px){
+
+    /*index page*/
     .SectionHome__1{
-        background-color: $LightRoseCacherLighter;
         display: grid;
         &--caroussel, &--presentation{
             grid-column: 1 / span 2;
             padding: 0;
             margin: 0;
+        }
+    }
+
+    /*apropos page*/
+    .SectionApropos__1{
+        display: grid;
+        &--image, &--presentation{
+            grid-column: 1 / span 2;
+            padding: 0;
+            margin: 0;
+        }
+        &--presentation{
+            &-button{
+                margin: 40px 0;
+                text-align: center;
+            }
         }
     }
 

@@ -16,3 +16,11 @@ référence : https://flowbite.com/docs/components/gallery/
 Page contact
 référence : https://v1.tailwindcss.com/components/forms
 
+
+Page apropos :
+LEs technologies appliquées:
+référence : https://tailwind-elements.com/snippets/tailwind/tailwindelements/5240719
+équipe de travaille : 
+référence : https://tailwind-elements.com/snippets/tailwind/tailwindelements/5239629
+
+

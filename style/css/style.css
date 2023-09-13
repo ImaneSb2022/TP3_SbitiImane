@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.SectionTitle, .SectionApropos__3 h2, .SectionApropos__2 h2, .SectionHome_3 h2, .SectionHome_2 h2 {
+.SectionTitle, .SectionExperience__3 h2, .SectionExperience__2 h2, .SectionExperience__1 h2, .SectionApropos__3 h2, .SectionApropos__2 h2, .SectionHome_3 h2, .SectionHome_2 h2 {
   text-align: center;
   font-size: 36px;
   font-weight: bold;
@@ -45,6 +45,9 @@ h1, h2 {
   text-underline-offset: 1em;
 }
 
+.header {
+  margin-bottom: 80px;
+}
 .header_nav a {
   color: #000;
   font-weight: 900;
@@ -186,14 +189,70 @@ h1, h2 {
 }
 
 .SectionApropos__2 {
+  margin-top: 0;
+  margin-right: 8%;
+  margin-bottom: 40px;
+  margin-left: 8%;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+.SectionApropos__2 h2 {
+  margin-bottom: 20px;
+}
+
+.SectionApropos__3 {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 40px;
+  margin-left: 0;
+  padding-top: 40px;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  background-color: #fbdbe5;
+}
+.SectionApropos__3 h2 {
+  margin-bottom: 20px;
+}
+
+/*********** EXPERIENCE.HTML  **************/
+.SectionExperience__1 {
+  margin-top: 10px;
+  margin-right: 8%;
+  margin-bottom: 60px;
+  margin-left: 8%;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+.SectionExperience__1 h2 {
+  margin: 0 0 20px 0;
+}
+.SectionExperience__1 article {
+  padding: 20px;
+}
+.SectionExperience__1 article h4 {
+  font-weight: bold;
+  font-size: 24px;
+}
+.SectionExperience__1--annee {
+  text-align: right;
+  font-weight: bolder;
+}
+
+.SectionExperience__2 {
+  margin-top: 40px;
   background-image: url("../../img/bg-footer.jpg");
   background-attachment: fixed;
   height: 70%;
 }
-.SectionApropos__2 h2 {
+.SectionExperience__2 h2 {
   margin-top: 40px;
 }
-.SectionApropos__2--bloc {
+.SectionExperience__2--bloc {
   background-color: #fbdbe5;
   margin-top: 40px;
   margin-right: 8%;
@@ -204,23 +263,23 @@ h1, h2 {
   padding-bottom: 0;
   padding-left: 0;
 }
-.SectionApropos__2--bloc-competence1, .SectionApropos__2--bloc-competence2 {
+.SectionExperience__2--bloc-competence1, .SectionExperience__2--bloc-competence2 {
   padding: 40px;
 }
-.SectionApropos__2--bloc-competence1 h4, .SectionApropos__2--bloc-competence2 h4 {
+.SectionExperience__2--bloc-competence1 h4, .SectionExperience__2--bloc-competence2 h4 {
   color: #CA3C66;
   font-weight: bold;
   font-size: 24px;
 }
-.SectionApropos__2--bloc-competence1 ul, .SectionApropos__2--bloc-competence2 ul {
+.SectionExperience__2--bloc-competence1 ul, .SectionExperience__2--bloc-competence2 ul {
   margin-top: 20px;
 }
-.SectionApropos__2--bloc-competence1 ul li, .SectionApropos__2--bloc-competence2 ul li {
+.SectionExperience__2--bloc-competence1 ul li, .SectionExperience__2--bloc-competence2 ul li {
   font-size: 18px;
   padding-bottom: 10px;
 }
 
-.SectionApropos__3 {
+.SectionExperience__3 {
   margin-top: 10px;
   margin-right: 8%;
   margin-bottom: 60px;
@@ -230,19 +289,13 @@ h1, h2 {
   padding-bottom: 0;
   padding-left: 0;
 }
-.SectionApropos__3 h2 {
+.SectionExperience__3 h2 {
   margin: 0 0 20px 0;
 }
-.SectionApropos__3 article {
-  padding: 20px;
-}
-.SectionApropos__3 article h4 {
+.SectionExperience__3 ol li time {
+  color: #CA3C66;
   font-weight: bold;
-  font-size: 24px;
-}
-.SectionApropos__3--annee {
-  text-align: right;
-  font-weight: bolder;
+  font-size: 18px;
 }
 
 /*********** CONTACT.HTML  **************/
@@ -293,13 +346,26 @@ h1, h2 {
 /*  Les média queries   */
 /* 768px > Largeur de l'écran  */
 @media (max-width: 768px) and (min-width: 500px) {
+  /*index page*/
   .SectionHome__1 {
-    background-color: #fbdbe5;
     display: grid;
   }
   .SectionHome__1--caroussel, .SectionHome__1--presentation {
     grid-column: 1/span 2;
     padding: 0;
     margin: 0;
+  }
+  /*apropos page*/
+  .SectionApropos__1 {
+    display: grid;
+  }
+  .SectionApropos__1--image, .SectionApropos__1--presentation {
+    grid-column: 1/span 2;
+    padding: 0;
+    margin: 0;
+  }
+  .SectionApropos__1--presentation-button {
+    margin: 40px 0;
+    text-align: center;
   }
 }
