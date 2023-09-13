@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.SectionTitle, .SectionHome_3 h2, .SectionHome_2 h2 {
+.SectionTitle, .SectionApropos__3 h2, .SectionApropos__2 h2, .SectionHome_3 h2, .SectionHome_2 h2 {
   text-align: center;
   font-size: 36px;
   font-weight: bold;
@@ -190,9 +190,12 @@ h1, h2 {
   background-attachment: fixed;
   height: 70%;
 }
+.SectionApropos__2 h2 {
+  margin-top: 40px;
+}
 .SectionApropos__2--bloc {
   background-color: #fbdbe5;
-  margin-top: 60px;
+  margin-top: 40px;
   margin-right: 8%;
   margin-bottom: 20px;
   margin-left: 8%;
@@ -215,6 +218,31 @@ h1, h2 {
 .SectionApropos__2--bloc-competence1 ul li, .SectionApropos__2--bloc-competence2 ul li {
   font-size: 18px;
   padding-bottom: 10px;
+}
+
+.SectionApropos__3 {
+  margin-top: 10px;
+  margin-right: 8%;
+  margin-bottom: 60px;
+  margin-left: 8%;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+.SectionApropos__3 h2 {
+  margin: 0 0 20px 0;
+}
+.SectionApropos__3 article {
+  padding: 20px;
+}
+.SectionApropos__3 article h4 {
+  font-weight: bold;
+  font-size: 24px;
+}
+.SectionApropos__3--annee {
+  text-align: right;
+  font-weight: bolder;
 }
 
 /*********** CONTACT.HTML  **************/
@@ -260,4 +288,18 @@ h1, h2 {
   color: #CA3C66;
   text-decoration: underline;
   text-underline-offset: 1em;
+}
+
+/*  Les média queries   */
+/* 768px > Largeur de l'écran  */
+@media (max-width: 768px) and (min-width: 500px) {
+  .SectionHome__1 {
+    background-color: #fbdbe5;
+    display: grid;
+  }
+  .SectionHome__1--caroussel, .SectionHome__1--presentation {
+    grid-column: 1/span 2;
+    padding: 0;
+    margin: 0;
+  }
 }
