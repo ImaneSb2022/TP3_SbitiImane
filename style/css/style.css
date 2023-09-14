@@ -379,8 +379,7 @@ h1, h2 {
 }
 
 /*  Les média queries   */
-/* 768px > Largeur de l'écran  */
-@media (max-width: 768px) and (min-width: 500px) {
+@media (max-width: 768px) and (min-width: 450px) {
   /*index page*/
   .SectionHome__1 {
     display: grid;
