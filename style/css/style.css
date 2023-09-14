@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.SectionTitle, .SectionExperience__3 h2, .SectionExperience__2 h2, .SectionExperience__1 h2, .SectionApropos__3 h2, .SectionApropos__2 h2, .SectionHome_3 h2, .SectionHome_2 h2 {
+.SectionTitle, .SectionContact__1 h2, .SectionExperience__3 h2, .SectionExperience__2 h2, .SectionExperience__1 h2, .SectionApropos__3 h2, .SectionApropos__2 h2, .SectionHome_3 h2, .SectionHome_2 h2 {
   text-align: center;
   font-size: 36px;
   font-weight: bold;
@@ -304,20 +304,55 @@ h1, h2 {
   margin-right: 8%;
   margin-bottom: 40px;
   margin-left: 8%;
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  background-color: #fbdbe5;
   justify-self: center;
+}
+.SectionContact__1 h2 {
+  margin: 0 0 20px 0;
 }
 .SectionContact__1-form {
   align-self: center;
 }
-
-.errorMessage {
+.SectionContact__1 #form input[type=submit] {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  background-color: #4AA3A2;
+  border: none;
+  color: #000;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.SectionContact__1 .input-control {
+  display: flex;
+  flex-direction: column;
+}
+.SectionContact__1 .input-control input {
+  border: 1px solid #A7E0E0;
+  border-radius: 4px;
+  display: block;
+  font-size: 14px;
+  padding: 10px;
+}
+.SectionContact__1 .input-control input:focus {
+  outline: 0;
+}
+.SectionContact__1 .input-control.success input, .SectionContact__1 .input-control.success textarea {
+  border-color: #09c372;
+}
+.SectionContact__1 .input-control.error input, .SectionContact__1 .input-control.error textarea {
+  border-color: #CA3C66;
+}
+.SectionContact__1 .input-control .errorMessage {
   color: #CA3C66;
   font-weight: bold;
-  font-size: 9px;
+  font-size: 14px;
+  height: 13px;
 }
 
 /*footer*/

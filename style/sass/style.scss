@@ -185,14 +185,6 @@ h1, h2{
     }
 }
 
-
-
-
-
-
-
-
-
 /**************  APROPOS.HTML *********/
 
 .SectionApropos__1{
@@ -234,8 +226,6 @@ h1, h2{
         margin-bottom:20px;
     }
 }
-
-
 
 
 /*********** EXPERIENCE.HTML  **************/
@@ -306,21 +296,63 @@ h1, h2{
 /*********** CONTACT.HTML  **************/
 
 .SectionContact__1{
-    @include container(20px, 8%, 40px, 8%, 0, 0, 0, 0);
+    @include container(20px, 8%, 40px, 8%, 40px, 40px, 40px, 40px);
+    background-color: $LightRoseCacherLighter;
     justify-self: center;
+    h2{
+        @extend .SectionTitle;
+        margin:0 0 20px 0;
+    }
     &-form{
         align-self: center;
     }
 
-
+    #form input[type=submit] {
+        padding: 10px;
+        margin-top: 10px;
+        width: 100%;
+        color: white;
+        background-color: $Turquoise;
+        border: none;
+        color: $Dark;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+    .input-control {
+        display: flex;
+        flex-direction: column;
+        input{
+            border: 1px solid $LightTurquoise;
+            border-radius: 4px;
+            display: block;
+            font-size: 14px;
+            padding: 10px;
+            &:focus{
+                outline: 0;
+            }
+        }
+    }
+    .input-control.success{
+        input , textarea{
+            border-color: #09c372;
+        }
+        
+    }
+    
+    .input-control.error{
+        input, textarea{
+            border-color: $RoseIndient;
+        }
+    }
+    
+    .input-control .errorMessage {
+        color: $RoseIndient;
+        font-weight: bold;
+        font-size: 14px;
+        height: 13px;
+    }
     
 }
-.errorMessage {
-    color: $RoseIndient;
-    font-weight: bold;
-    font-size: 9px;
-}
-
 
 /*footer*/
 .footer{
